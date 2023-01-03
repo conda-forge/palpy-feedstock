@@ -1,5 +1,5 @@
 {% set name = "palpy" %}
-{% set version = "1.8.1" %}
+{% set version = "1.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 64eda4042b03deb1153cac804b4f7fba19b0d2b3f8ffaeadf10fc51869d5e9d2
+  sha256: 553c028c567a5342f2ce0035c757cfcd0fdb5469a149db7381dbb6d1909d6314
 
 build:
   number: 5
