@@ -10,7 +10,7 @@ source:
   sha256: 553c028c567a5342f2ce0035c757cfcd0fdb5469a149db7381dbb6d1909d6314
 
 build:
-  number: 7
+  number: 8
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [win]
 
@@ -21,6 +21,7 @@ requirements:
     - cython <3                              # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
@@ -28,7 +29,6 @@ requirements:
     - cython <3
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
