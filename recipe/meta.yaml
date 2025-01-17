@@ -10,7 +10,7 @@ source:
   sha256: d42d537bc4af2b0d88af1bb2fa19d6911d78df72de0f94ce6a371a8c6535c540
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: true  # [win]
 
@@ -31,7 +31,6 @@ requirements:
     - cython
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
